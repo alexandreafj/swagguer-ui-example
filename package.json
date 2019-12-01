@@ -1,0 +1,21 @@
+{
+  "name": "nodeswagger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app.js",
+  "scripts": {
+    "dev": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "express": "^4.17.1",
+    "swagger-express-mw": "^0.7.0",
+    "swagger-parser": "^8.0.3",
+    "swagger-routes-express": "^3.1.1",
+    "swagger-ui-express": "^4.1.2",
+    "yamljs": "^0.3.0"
+  }
+}

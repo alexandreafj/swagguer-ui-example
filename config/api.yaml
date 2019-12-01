@@ -1,0 +1,43 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: API Gateway - Teste
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: Bearer Token
+tags:
+  - name: custom
+    description: Teste
+definitions:
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+paths:
+  /hello:
+    x-swagger-router-controller: app
+    get:
+      summary: alias to GET /api/v1/hello
+      description: alias to GET /api/v1/hello
+      operationId: hello_world
+      tags:
+        - custom
+      responses:
+        200:
+          description: OK
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
